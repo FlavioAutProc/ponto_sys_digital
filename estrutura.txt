@@ -1,0 +1,12 @@
+/ponto-eletronico
+│── index.html          # Página principal
+│── style.css           # Estilos principais
+│── script.js           # Lógica principal
+│── feriados.json       # Lista de feriados de Maragogi-AL
+├── /assets
+│   ├── /icons          # Ícones do sistema
+│   └── /js
+│       ├── storage.js  # Manipulação de dados locais
+│       ├── pdf.js      # Geração de PDFs
+│       ├── feriados.js # Manipulação de feriados
+│       └── utils.js    # Funções utilitárias
