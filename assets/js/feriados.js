@@ -30,20 +30,13 @@ export async function loadHolidays() {
 }
 
 export function checkHolidays(dateStr) {
-    const date = new Date(dateStr);
+    const date = new Date(dateStr + 'T00:00:00'); // Força UTC
     const dateISO = date.toISOString().split('T')[0];
     
-    // Verifica se a data é um feriado
     const feriado = feriados.find(f => f.date === dateISO);
     
     if (feriado) {
         return feriado.name;
-    }
-    
-    // Verifica se é fim de semana
-    const dayOfWeek = date.getDay();
-    if (dayOfWeek === 0 || dayOfWeek === 6) {
-        return dayOfWeek === 0 ? 'Domingo' : 'Sábado';
     }
     
     return null;

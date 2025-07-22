@@ -78,3 +78,9 @@ export function setupPhotoUpload() {
         reader.readAsDataURL(file);
     });
 }
+
+// Adicione esta função no utils.js
+export function createLocalDate(dateStr) {
+    const [year, month, day] = dateStr.split('-').map(Number);
+    return new Date(year, month - 1, day);
+}
